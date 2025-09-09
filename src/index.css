@@ -1,0 +1,35 @@
+.list-group-item {
+  padding: 16px 18px;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+.btn-outline-primary, .btn-outline-danger {
+  min-width: 36px;
+}
+/* Tarjeta */
+.contact-card { position: relative; }
+
+/* Avatar y acciones: no se encogen */
+.contact-card .avatar { flex: 0 0 80px; }
+.contact-card .actions { flex: 0 0 auto; }
+
+/* Columna central: puede encogerse y hace ellipsis */
+.contact-card .info { min-width: 0; }
+.contact-card .name,
+.contact-card .line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Por si los nombres son larguísimos, permite romper palabras largas */
+.contact-card .name { word-break: break-word; white-space: normal; }
+
+/* En pantallas estrechas, que todo haga wrap bonito */
+@media (max-width: 576px) {
+  .contact-card > .d-flex { flex-wrap: wrap; }
+  .contact-card .actions { margin-left: auto; }
+}
